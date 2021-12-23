@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example_1
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: hello-ilan
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: hello-ilan
+    spec:
+      containers:
+        - name: hello-ilan
+          image: ilanm/hello-ilan
+          ports:
+            - containerPort: 443
