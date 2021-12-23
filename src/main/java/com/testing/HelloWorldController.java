@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * A very basic Hello World controller which returns the hostname.
  *
- * @author kim
- *
  */
 @RestController
 public class HelloWorldController {
@@ -36,7 +34,7 @@ public class HelloWorldController {
         String host = InetAddress.getLocalHost().getHostName();
         String ip = InetAddress.getLocalHost().getHostAddress();
         Map<String, String> response = new HashMap<>();
-        response.put(MESSAGE_KEY, "Hello World!");
+        response.put(MESSAGE_KEY, "Leumi Hello Ilan!");
         response.put(HOSTNAME_KEY, host);
         response.put(IP_KEY, ip);
         LOG.info("Returning {}", response);

@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: my-route
+  namespace: default
+spec:
+  rules:
+    - host: ilan.apps.tal.os-pub.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: example1
+              servicePort: 80
